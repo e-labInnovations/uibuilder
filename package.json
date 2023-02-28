@@ -1,0 +1,34 @@
+{
+  "name": "uib-root",
+  "version": "6.0.0",
+  "dependencies": {
+    "bulma": "^0.9.4",
+    "bulma-toast": "^2.4.2"
+  },
+  "uibuilder": {
+    "packages": {
+      "bulma": {
+        "spec": "^0.9.4",
+        "installFolder": "C:\\Users\\moham\\.node-red\\uibuilder\\node_modules\\bulma",
+        "installedVersion": "0.9.4",
+        "estimatedEntryPoint": "?",
+        "homepage": "https://www.npmjs.com/search?q=bulma",
+        "packageUrl": "/bulma",
+        "url": "../uibuilder/vendor/bulma/?",
+        "installedFrom": "npm",
+        "outdated": {}
+      },
+      "bulma-toast": {
+        "spec": "^2.4.2",
+        "installFolder": "C:\\Users\\moham\\.node-red\\uibuilder\\node_modules\\bulma-toast",
+        "installedVersion": "2.4.2",
+        "estimatedEntryPoint": "?",
+        "homepage": "https://www.npmjs.com/search?q=bulma-toast",
+        "packageUrl": "/bulma-toast",
+        "url": "../uibuilder/vendor/bulma-toast/?",
+        "installedFrom": "npm",
+        "outdated": {}
+      }
+    }
+  }
+}

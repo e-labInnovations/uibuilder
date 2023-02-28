@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./assets/img/icon.png">
+    <title>Impex - Dashboard</title>
+    <link type="text/css" rel="stylesheet" href="./index.css" media="all">
+</head>
+
+<body class="uib">
+    <section class="section main-counter">
+        <h2 class="subtitle">Main Counter</h2>
+        <div class="columns is-tablet .is-variable is-1">
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">01</span>
+                    <span id="main_count_01" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">02</span>
+                    <span id="main_count_02" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">03</span>
+                    <span id="main_count_03" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">04</span>
+                    <span id="main_count_04" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">05</span>
+                    <span id="main_count_05" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">06</span>
+                    <span id="main_count_06" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">07</span>
+                    <span id="main_count_07" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">08</span>
+                    <span id="main_count_08" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">09</span>
+                    <span id="main_count_09" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">10</span>
+                    <span id="main_count_10" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section tool-timers">
+        <h2 class="subtitle">Tool Timers</h2>
+        <div class="columns is-tablet .is-variable is-1">
+            <a href='./timer-history?timer=tool_timer&section=section01' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">01</span>
+                    Start: <span id="tt_01_start"></span><br>
+                    End  : <span id="tt_01_end"></span><br>
+                    Dur  : <span id="tt_01_duration"></span><br>
+                </div>
+            </a>
+            <a href='./timer-history?timer=tool_timer&section=section02' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">02</span>
+                    Start: <span id="tt_02_start"></span><br>
+                    End  : <span id="tt_02_end"></span><br>
+                    Dur  : <span id="tt_02_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=tool_timer&section=section03' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">03</span>
+                    Start: <span id="tt_03_start"></span><br>
+                    End  : <span id="tt_03_end"></span><br>
+                    Dur  : <span id="tt_03_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=tool_timer&section=section04' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">04</span>
+                    Start: <span id="tt_04_start"></span><br>
+                    End  : <span id="tt_04_end"></span><br>
+                    Dur  : <span id="tt_04_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=tool_timer&section=section05' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">05</span>
+                    Start: <span id="tt_05_start"></span><br>
+                    End  : <span id="tt_05_end"></span><br>
+                    Dur  : <span id="tt_05_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=tool_timer&section=section06' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">06</span>
+                    Start: <span id="tt_06_start"></span><br>
+                    End  : <span id="tt_06_end"></span><br>
+                    Dur  : <span id="tt_06_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=tool_timer&section=section07' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">07</span>
+                    Start: <span id="tt_07_start"></span><br>
+                    End  : <span id="tt_07_end"></span><br>
+                    Dur  : <span id="tt_07_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=tool_timer&section=section08' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">08</span>
+                    Start: <span id="tt_08_start"></span><br>
+                    End  : <span id="tt_08_end"></span><br>
+                    Dur  : <span id="tt_08_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=tool_timer&section=section09' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">09</span>
+                    Start: <span id="tt_09_start"></span><br>
+                    End  : <span id="tt_09_end"></span><br>
+                    Dur  : <span id="tt_09_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=tool_timer&section=section10' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">10</span>
+                    Start: <span id="tt_10_start"></span><br>
+                    End  : <span id="tt_10_end"></span><br>
+                    Dur  : <span id="tt_10_duration"></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="section tool-timers">
+        <h2 class="subtitle">Machine Timers</h2>
+        <div class="columns is-tablet .is-variable is-1">
+            <a href='./timer-history?timer=machine_timer&section=section01' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">01</span>
+                    Start: <span id="mt_01_start"></span><br>
+                    End  : <span id="mt_01_end"></span><br>
+                    Dur  : <span id="mt_01_duration"></span><br>
+                </div>
+            </a>
+            <a href='./timer-history?timer=machine_timer&section=section02' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">02</span>
+                    Start: <span id="mt_02_start"></span><br>
+                    End  : <span id="mt_02_end"></span><br>
+                    Dur  : <span id="mt_02_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=machine_timer&section=section03' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">03</span>
+                    Start: <span id="mt_03_start"></span><br>
+                    End  : <span id="mt_03_end"></span><br>
+                    Dur  : <span id="mt_03_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=machine_timer&section=section04' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">04</span>
+                    Start: <span id="mt_04_start"></span><br>
+                    End  : <span id="mt_04_end"></span><br>
+                    Dur  : <span id="mt_04_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=machine_timer&section=section05' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">05</span>
+                    Start: <span id="mt_05_start"></span><br>
+                    End  : <span id="mt_05_end"></span><br>
+                    Dur  : <span id="mt_05_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=machine_timer&section=section06' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">06</span>
+                    Start: <span id="mt_06_start"></span><br>
+                    End  : <span id="mt_06_end"></span><br>
+                    Dur  : <span id="mt_06_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=machine_timer&section=section07' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">07</span>
+                    Start: <span id="mt_07_start"></span><br>
+                    End  : <span id="mt_07_end"></span><br>
+                    Dur  : <span id="mt_07_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=machine_timer&section=section08' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">08</span>
+                    Start: <span id="mt_08_start"></span><br>
+                    End  : <span id="mt_08_end"></span><br>
+                    Dur  : <span id="mt_08_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=machine_timer&section=section09' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">09</span>
+                    Start: <span id="mt_09_start"></span><br>
+                    End  : <span id="mt_09_end"></span><br>
+                    Dur  : <span id="mt_09_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=machine_timer&section=section10' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">10</span>
+                    Start: <span id="mt_10_start"></span><br>
+                    End  : <span id="mt_10_end"></span><br>
+                    Dur  : <span id="mt_10_duration"></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="section tool-timers">
+        <h2 class="subtitle">Step Timers</h2>
+        <div class="columns is-tablet .is-variable is-1">
+            <a href='./timer-history?timer=step_timer&section=section01' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">01</span>
+                    Start: <span id="st_01_start"></span><br>
+                    End  : <span id="st_01_end"></span><br>
+                    Dur  : <span id="st_01_duration"></span><br>
+                </div>
+            </a>
+            <a href='./timer-history?timer=step_timer&section=section02' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">02</span>
+                    Start: <span id="st_02_start"></span><br>
+                    End  : <span id="st_02_end"></span><br>
+                    Dur  : <span id="st_02_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=step_timer&section=section03' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">03</span>
+                    Start: <span id="st_03_start"></span><br>
+                    End  : <span id="st_03_end"></span><br>
+                    Dur  : <span id="st_03_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=step_timer&section=section04' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">04</span>
+                    Start: <span id="st_04_start"></span><br>
+                    End  : <span id="st_04_end"></span><br>
+                    Dur  : <span id="st_04_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=step_timer&section=section05' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">05</span>
+                    Start: <span id="st_05_start"></span><br>
+                    End  : <span id="st_05_end"></span><br>
+                    Dur  : <span id="st_05_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=step_timer&section=section06' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">06</span>
+                    Start: <span id="st_06_start"></span><br>
+                    End  : <span id="st_06_end"></span><br>
+                    Dur  : <span id="st_06_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=step_timer&section=section07' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">07</span>
+                    Start: <span id="st_07_start"></span><br>
+                    End  : <span id="st_07_end"></span><br>
+                    Dur  : <span id="st_07_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=step_timer&section=section08' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">08</span>
+                    Start: <span id="st_08_start"></span><br>
+                    End  : <span id="st_08_end"></span><br>
+                    Dur  : <span id="st_08_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=step_timer&section=section09' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">09</span>
+                    Start: <span id="st_09_start"></span><br>
+                    End  : <span id="st_09_end"></span><br>
+                    Dur  : <span id="st_09_duration"></span>
+                </div>
+            </a>
+            <a href='./timer-history?timer=step_timer&section=section10' class="column">
+                <div class="notification is-link">
+                    <span class="section-no tag is-white">10</span>
+                    Start: <span id="st_10_start"></span><br>
+                    End  : <span id="st_10_end"></span><br>
+                    Dur  : <span id="st_10_duration"></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="section main-counter">
+        <h2 class="subtitle">Reject Counter</h2>
+        <div class="columns is-tablet .is-variable is-1">
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">01</span>
+                    <span id="reject_count_01" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">02</span>
+                    <span id="reject_count_02" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">03</span>
+                    <span id="reject_count_03" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">04</span>
+                    <span id="reject_count_04" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">05</span>
+                    <span id="reject_count_05" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">06</span>
+                    <span id="reject_count_06" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">07</span>
+                    <span id="reject_count_07" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">08</span>
+                    <span id="reject_count_08" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">09</span>
+                    <span id="reject_count_09" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="notification is-link has-text-centered">
+                    <span class="section-no tag is-white">10</span>
+                    <span id="reject_count_10" class="is-size-3-tablet is-size-2-desktop is-size-1-widescreen">0</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script
+        src="../uibuilder/vendor/socket.io/socket.io.js">/* REQUIRED: Socket.IO is loaded only once for all instances. Without this, you don't get a websocket connection */</script>
+    <script src="./uibuilderfe.min.js">/* REQUIRED: remove 'min.' to use dev version */</script>
+    <script src="./index.js">/* OPTIONAL: Put your custom code here */</script>
+</body>
+
+</html>
+
+<!-- <!doctype html>
+<html lang="en"><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Impex - Dashboard</title>
+    <meta name="description" content="Impex - Dashboard">
+    <link rel="icon" href="./images/node-blue.ico"> -->
+
+<!-- Your own CSS -->
+<!-- <link type="text/css" rel="stylesheet" href="./index.css" media="all">
+
+</head><body class="uib">
+    
+    <h1>Impex - Dashboard</h1>
+
+    <button onclick="fnSendToNR('A message from the sharp end!')">Send a msg back to Node-RED</button>
+
+    <pre id="msg" class="syntax-highlight">Waiting for a message from Node-RED</pre> -->
+
+<!-- #region Supporting Scripts. These MUST be in the right order. Note no leading / -->
+<!-- <script src="../uibuilder/vendor/socket.io/socket.io.js">/* REQUIRED: Socket.IO is loaded only once for all instances. Without this, you don't get a websocket connection */</script>
+    <script src="./uibuilderfe.min.js">/* REQUIRED: remove 'min.' to use dev version */</script>
+    <script src="./index.js">/* OPTIONAL: Put your custom code here */</script> -->
+<!-- #endregion -->
+
+<!-- </body></html> -->

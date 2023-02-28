@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../assets/img/icon.png">
+    <title>Impex - Dashboard</title>
+    <link type="text/css" rel="stylesheet" href="./style.css" media="all">
+</head>
+
+<body class="uib">
+    <section class="section">
+        <h1 class="title" id="title">Tool Timer</h1>
+        <h2 class="subtitle" id="subtitle">Section01</h2>
+
+        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <thead>
+                <tr>
+                    <th>Section</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>Total</th>
+                    <th></th>
+                    <th></th>
+                    <th id="total_duration">Duration</th>
+                </tr>
+            </tfoot>
+            <tbody id="tbody"></tbody>
+        </table>
+            <div class="columns">
+                <div class="column">
+                    <a href="/impex-dashboard" class="button is-link">Back</a>
+                </div>
+                <div class="column has-text-right">
+                    <button id="btnCurrentClear" class="button is-warning">Clear This History</button>
+                    <button id="btnAllClear" class="button is-danger">Clear All Data</button>
+                </div>
+            </div>
+    </section>
+
+    <div class="modal" id="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title" id="modalTitle">Modal title</p>
+            <button class="delete" aria-label="close" onclick="closeModal()"></button>
+          </header>
+          <section class="modal-card-body" id="modalContent">
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-danger" id="modalConfirmBtn">Proceed</button>
+            <button class="button" onclick="closeModal()">Cancel</button>
+          </footer>
+        </div>
+    </div>
+
+    <script
+        src="../../uibuilder/vendor/socket.io/socket.io.js">/* REQUIRED: Socket.IO is loaded only once for all instances. Without this, you don't get a websocket connection */</script>
+    <script src=".././uibuilderfe.min.js">/* REQUIRED: remove 'min.' to use dev version */</script>
+    <script src="../../uibuilder/vendor/bulma-toast/dist/bulma-toast.min.js"></script>
+    <script src="./index.js">/* OPTIONAL: Put your custom code here */</script>
+</body>
+
+</html>

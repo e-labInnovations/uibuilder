@@ -1,0 +1,49 @@
+/* Load the defaults from `<userDir>/node_modules/node-red-contrib-uibuilder/front-end/src/uib-styles.css` */
+/* @import url("./uib-styles.css"); */
+@import url("../uibuilder/vendor/bulma/css/bulma.css");
+
+.section {
+    padding: 0.5rem ;
+}
+
+.section > .subtitle {
+    margin-bottom: 0.5rem;
+}
+
+.main-counter > .columns {
+    padding: 0.25rem;
+}
+
+.main-counter > .columns > .column {
+    padding: 0.25rem !important;
+    margin-bottom: 0rem !important;
+}
+
+.main-counter > .columns > .column > .notification {
+    padding: 0 !important;
+}
+/* .counter:last-child { margin-bottom: 0.5rem; } */
+
+
+
+.tool-timers > .columns {
+    padding: 0.25rem;
+}
+
+.tool-timers> .columns > .column {
+    padding: 0.25rem !important;
+    margin-bottom: 0rem !important;
+}
+
+.tool-timers> .columns > .column > .notification {
+    padding: 0.5rem !important;
+}
+
+.notification .section-no {
+    position: absolute;
+    right: 0.1rem;
+    top: 0.1rem;
+    height: 1.5em;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
