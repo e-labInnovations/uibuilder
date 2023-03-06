@@ -32,6 +32,13 @@ window.onload = function() {
     })
 }
 
+//Open Settings Alt+s
+window.addEventListener("keydown", function(event) {
+    if (event.altKey && event.key === "s") {
+      window.location.href = "/impex-dashboard/settings/";
+    }
+});
+
 const updateCount = (msg, count_pre) => {
     Object.keys(msg.counts).forEach(sectionName => {
         let count_element = document.getElementById(count_pre + sectionName.replace('section', ''))

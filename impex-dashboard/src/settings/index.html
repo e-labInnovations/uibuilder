@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../assets/img/icon.png">
+    <title>Impex - Dashboard</title>
+    <link type="text/css" rel="stylesheet" href="./style.css" media="all">
+</head>
+
+<body class="uib">
+    <section class="section">
+        <h1 class="title" id="title">Settings</h1>
+
+        <article class="panel is-link">
+            <p class="panel-heading">All</p>
+            <div class="p-5">
+                <button id="btnClearAll" class="button is-danger">Clear All Data</button>
+            </div>
+        </article>
+
+        <article class="panel is-link">
+            <p class="panel-heading">
+                <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-sort-numeric-down" viewBox="0 0 16 16">
+                        <path d="M12.438 1.668V7H11.39V2.684h-.051l-1.211.859v-.969l1.262-.906h1.046z" />
+                        <path fill-rule="evenodd"
+                            d="M11.36 14.098c-1.137 0-1.708-.657-1.762-1.278h1.004c.058.223.343.45.773.45.824 0 1.164-.829 1.133-1.856h-.059c-.148.39-.57.742-1.261.742-.91 0-1.72-.613-1.72-1.758 0-1.148.848-1.835 1.973-1.835 1.09 0 2.063.636 2.063 2.687 0 1.867-.723 2.848-2.145 2.848zm.062-2.735c.504 0 .933-.336.933-.972 0-.633-.398-1.008-.94-1.008-.52 0-.927.375-.927 1 0 .64.418.98.934.98z" />
+                        <path
+                            d="M4.5 2.5a.5.5 0 0 0-1 0v9.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L4.5 12.293V2.5z" />
+                    </svg>
+                </span>
+                Counters
+            </p>
+            <div class="p-5">
+                <table class="table is-fullwidth" id="count-table">
+                    <thead>
+                        <tr>
+                            <th>Section</th>
+                            <th>Main Count</th>
+                            <th>Reject Count</th>
+                            <th>Select All</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <script>
+                            for (var i = 1; i <= 10; i++) {
+                                var sectionId = 'section' + ('0' + i).slice(-2);
+                                const tr = document.createElement('tr');
+                                tr.innerHTML = `
+    <td>Section ${sectionId.slice(-2)}</td>
+    <td>
+        <label class="checkbox">
+            <input type="checkbox" class="main-count" data-section="${sectionId}">
+            <span class="checkmark"></span>
+        </label>
+    </td>
+    <td>
+        <label class="checkbox">
+            <input type="checkbox" class="reject-count" data-section="${sectionId}">
+            <span class="checkmark"></span>
+        </label>
+    </td>
+    <td>
+        <label class="checkbox">
+            <input type="checkbox" onclick="selectAllInRow(this)">
+            <span class="checkmark"></span>
+        </label>
+    </td>`;
+                                document.querySelector('#count-table tbody').appendChild(tr);
+                            }
+                        </script>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Select All</th>
+                            <td>
+                                <label class="checkbox">
+                                    <input type="checkbox" onclick="selectAll('main-count', this)">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="checkbox">
+                                    <input type="checkbox" onclick="selectAll('reject-count', this)">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="checkbox">
+                                    <input type="checkbox" onclick="selectAllRows(this)">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <br>
+
+                <button id="btnResetAllCounters" class="button is-danger">Reset All</button>
+                <button id="btnResetSelectedCounter" class="button is-warning">Reset Selected Counters</button>
+            </div>
+        </article>
+        <article class="panel is-link">
+            <p class="panel-heading">
+                <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-stopwatch" viewBox="0 0 16 16">
+                        <path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5V5.6z" />
+                        <path
+                            d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64a.715.715 0 0 1 .012-.013l.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354a.512.512 0 0 1-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5zM8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3z" />
+                    </svg>
+                </span>
+                Timers
+            </p>
+            <div class="p-5">
+                <table class="table is-fullwidth" id="timer-table">
+                    <thead>
+                        <tr>
+                            <th>Section</th>
+                            <th>Tool Timer</th>
+                            <th>Machine Timer</th>
+                            <th>Step Timer</th>
+                            <th>Select All</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <script>
+                            for (var i = 1; i <= 10; i++) {
+                                var sectionId = 'section' + ('0' + i).slice(-2);
+                                const tr = document.createElement('tr');
+                                tr.innerHTML = `
+    <td>Section ${sectionId.slice(-2)}</td>
+    <td>
+        <label class="checkbox">
+            <input type="checkbox" class="tool-timer" data-section="${sectionId}">
+            <span class="checkmark"></span>
+        </label>
+    </td>
+    <td>
+        <label class="checkbox">
+            <input type="checkbox" class="machine-timer" data-section="${sectionId}">
+            <span class="checkmark"></span>
+        </label>
+    </td>
+    <td>
+        <label class="checkbox">
+            <input type="checkbox" class="step-timer" data-section="${sectionId}">
+            <span class="checkmark"></span>
+        </label>
+    </td>
+    <td>
+        <label class="checkbox">
+            <input type="checkbox" onclick="selectAllInRow(this)">
+            <span class="checkmark"></span>
+        </label>
+    </td>`;
+                                document.querySelector('#timer-table tbody').appendChild(tr);
+                            }
+                        </script>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Select All</th>
+                            <td>
+                                <label class="checkbox">
+                                    <input type="checkbox" onclick="selectAll('tool-timer', this)">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="checkbox">
+                                    <input type="checkbox" onclick="selectAll('machine-timer', this)">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="checkbox">
+                                    <input type="checkbox" onclick="selectAll('step-timer', this)">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="checkbox">
+                                    <input type="checkbox" onclick="selectAllRows(this)">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <br>
+                <div class="is-flex is-justify-content-space-between">
+                    <div>
+                        <h2 class="title is-5">Status &amp; History</h2>
+                        <button id="btnClearAllTimers" class="button is-danger">All Timers</button>
+                        <button id="btnClearSelectedTimers" class="button is-warning">Selected Timers</button>
+                    </div>
+                    <div>
+                        <h2 class="title is-5">Status</h2>
+                        <button id="btnClearStatusAllTimers" class="button is-danger">All Timers</button>
+                        <button id="btnClearStatusSelectedTimers" class="button is-warning">Selected Timers</button>
+                    </div>
+                    <div>
+                        <h2 class="title is-5">History</h2>
+                        <button id="btnClearHistoryAllTimers" class="button is-danger">All Timers</button>
+                        <button id="btnClearHistorySelectedTimers" class="button is-warning">Selected Timers</button>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+
+        <div class="columns">
+            <div class="column">
+                <a href="/impex-dashboard" class="button is-link">Home</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title" id="modalTitle">Modal title</p>
+                <button class="delete" aria-label="close" onclick="closeModal()"></button>
+            </header>
+            <section class="modal-card-body" id="modalContent">
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-danger" id="modalConfirmBtn">Proceed</button>
+                <button class="button" onclick="closeModal()">Cancel</button>
+            </footer>
+        </div>
+    </div>
+
+    <script
+        src="../../uibuilder/vendor/socket.io/socket.io.js">/* REQUIRED: Socket.IO is loaded only once for all instances. Without this, you don't get a websocket connection */</script>
+    <script src=".././uibuilderfe.min.js">/* REQUIRED: remove 'min.' to use dev version */</script>
+    <script src="../../uibuilder/vendor/bulma-toast/dist/bulma-toast.min.js"></script>
+    <script src="./index.js">/* OPTIONAL: Put your custom code here */</script>
+</body>
+
+</html>

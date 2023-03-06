@@ -41,23 +41,23 @@ window.onload = function () {
     })
 
     //All clear button
-    document.getElementById('btnAllClear').addEventListener('click', () => {
-        document.getElementById('modalTitle').innerText = 'Warning!'
-        document.getElementById('modalContent').innerHTML =`
-It clears all your data including all histories, counts and timers<br>
-Enter password and continue
-<div class="control">
-    <input class="input" type="password" name="password" placeholder="Password" id="password">
-</div>
-<input id="modalOption" type="hidden" value="all_clear">
-`
-        openModal()
-    })
+//     document.getElementById('btnAllClear').addEventListener('click', () => {
+//         document.getElementById('modalTitle').innerText = 'Warning!'
+//         document.getElementById('modalContent').innerHTML =`
+// It clears all your data including all histories, counts and timers<br>
+// Enter password and continue
+// <div class="control">
+//     <input class="input" type="password" name="password" placeholder="Password" id="password">
+// </div>
+// <input id="modalOption" type="hidden" value="all_clear">
+// `
+//         openModal()
+//     })
 
     //Clear current history button
-    document.getElementById('btnCurrentClear').addEventListener('click', () => {
-        console.log('Current clear');
-    })
+    // document.getElementById('btnCurrentClear').addEventListener('click', () => {
+    //     console.log('Current clear');
+    // })
 
     //Clear btn click
     document.getElementById('modalConfirmBtn').addEventListener('click', () => {

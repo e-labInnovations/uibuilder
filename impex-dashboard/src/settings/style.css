@@ -1,0 +1,41 @@
+@import url("/uibuilder/vendor/bulma/css/bulma.css");
+
+.checkbox input[type="checkbox"] {
+    width: 2em;
+    height: 2em;
+  }
+  
+  /* hide the default checkbox */
+  .checkbox input[type="checkbox"] {
+    display: none;
+  }
+  
+  /* style the custom checkbox */
+  .checkmark {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    border: 2px solid #485fc7;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  /* add a tick mark to the custom checkbox when it's checked */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1em;
+    height: 1em;
+    background-color: #485fc7;
+    border-radius: 1px;
+  }
+  
+  .checkbox input[type="checkbox"]:checked + .checkmark:after {
+    display: block;
+  }
+  
